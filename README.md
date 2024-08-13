@@ -1,6 +1,6 @@
 # MGMCF
 
-This repository contains the source code for our paper. 
+This repository contains the source code for our paper "Multi-Granular Multimodal Clue Fusion for Meme Understanding". 
 
 ## Setup
 - **Build environment**
