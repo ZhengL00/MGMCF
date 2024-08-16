@@ -7,7 +7,9 @@ import warnings
 warnings.filterwarnings('ignore')
 from gensim.models import KeyedVectors
 from datetime import timedelta
-from B_loaddata import *
+from loaddata import *
+from model import *
+from train import *
 torch.cuda.manual_seed()
 
 
@@ -17,18 +19,7 @@ lang,model_mode = model_name.split('_')
 is_mld = True
 is_inter = True
 is_intra = True
-cat_or_add = 'add'
 share_or_single = 'share'
-
-is_baseline = False
-
-if is_baseline:
-    from B_model_old import *
-else:
-    from B_model_inter_intra import *
-
-from B_train import *
-
 
 class_sentiment = 7
 class_intention = 5
