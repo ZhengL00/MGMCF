@@ -17,10 +17,6 @@ mode = 'woself'
 is_split = True
 
 
-
-
-
-
 class GatingLayer(nn.Module):
     def __init__(self, input_size):
         super(GatingLayer, self).__init__()
@@ -168,7 +164,6 @@ class mergeNet(nn.Module):
         self.cat_or_add = cat_or_add
 
         if feature_mode =='resnet':
-            print('resnet!!!')
             self.bn_input2 = nn.BatchNorm1d(2048, momentum=0.1).to(device)
             self.fc = nn.Linear(2048, 768).to(device)
             self.fc_img_dim = nn.Linear(2048, after_img).to(device)
